@@ -5,5 +5,5 @@ import { Directive, HostBinding } from '@angular/core';
 })
 
 export class FavoriteDirective {
-  @HostBinding('is-favorite') isFavorite = true;
+  @HostBinding('class.is-favorite') isFavorite = true;
 }
