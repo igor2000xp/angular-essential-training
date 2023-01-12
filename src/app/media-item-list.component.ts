@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
 
+export interface IMediaItem {
+  id: number;
+  name: string;
+  medium: string;
+  category: string;
+  year: number;
+  watchedOn: number;
+  isFavorite: boolean;
+}
+
 @Component({
   selector: 'mw-media-item-list',
   templateUrl: './media-item-list.component.html',
   styleUrls: ['./media-item-list.component.css']
 })
 export class MediaItemListComponent {
-  mediaItems = [
+  mediaItems: IMediaItem[] = [
     {
       id: 1,
       name: 'Firebug',
@@ -51,5 +61,5 @@ export class MediaItemListComponent {
     }
   ];
 
-  onMediaItemDelete(mediaItem) { }
+  onMediaItemDelete(mediaItem: IMediaItem) { }
 }
